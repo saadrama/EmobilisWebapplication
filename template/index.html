@@ -1,0 +1,428 @@
+{% extends "base.html" %}
+{% block content %}
+        <!-- Carousel Start -->
+        <div class="carousel">
+            <div class="container-fluid">
+                <div class="owl-carousel">
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="/static/img/carousel-1.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-text">
+                            <h1>Best <span>Quality</span> Ingredients</h1>
+                            <p>
+                               Our <strong>Food are</strong> Tasty, Yummy, Delicious, Delectable, Appetizing, Aromatic, Delicious, Flavorful, mouth-watering,
+                            </p>
+                            <div class="carousel-btn">
+                                <a class="btn custom-btn" href="dish.html">View Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="/static/img/carousel-2.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-text">
+                            <h1>World’s <span>Best</span> Chef</h1>
+                            <p>
+                                Satisfy Your Sweet Tooth with Our Homemade Desserts, Feeling Crabby? Try Our Delicious Crab Cakes!
+                                </p>
+                            <div class="carousel-btn">
+                                <a class="btn custom-btn" href="dish.html">View Menu</a>
+                                <a class="btn custom-btn" href="">Order Now!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="/static/img/carousel-3.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-text">
+                            <h1>Fastest Order <span>Delivery</span></h1>
+                            <p>
+                                Experience lightning-fast order delivery with our expedited service. We prioritize speed without compromising quality, ensuring your order reaches you promptly and efficiently. Trust us for rapid, reliable service that brings your order to your doorstep in record time.
+                            <div class="carousel-btn">
+                                <a class="btn custom-btn" href="{% url 'all_dishes' %}" class="nav-item nav-link">View Menu</a>
+                            
+                                <a class="btn custom-btn" href="">Book Table</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+        <div class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="/static/img/about.jpg" alt="Image">
+                            <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header">
+                                <p>About Us</p>
+                                <h2>Cooking Since 1990</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    The customer is very important, the customer will be followed by the customer. My boat is not worth it. Curabitur wants to decorate with ease, not vulputate. Some fear of torture, the author of that pregnant story, who is the cartoon.
+                                    
+                                </p>
+                                <p>
+                                    The customer is very important, the customer will be followed by the customer. My boat is not worth it. Curabitur wants to decorate with ease, not vulputate. Some fear of torture, the author of that pregnant story, who is the cartoon. I don't talk to players, and only the most important topic. Aenean will be followed by the ferry port. Sometimes, however, the lake does not flatter.
+                                </p>
+                                <a class="btn custom-btn" href="">Book A Table</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        
+        <!-- Video Modal Start-->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>        
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- Video Modal End -->
+        
+        
+        <!-- Feature Start -->
+        <div class="feature">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section-header">
+                            <p>Why Choose Us</p>
+                            <h2>Our Key Features</h2>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-img">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="/static/img/feature-1.jpg" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="/static/img/feature-2.jpg" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="/static/img/feature-3.jpg" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="/static/img/feature-4.jpg" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                The chef-owner of Osteria Francescana in Italy, Bottura is celebrated for his avant-garde and artistic approach to Italian cuisine. He's known for pushing boundaries and reinterpreting classic dishes.
+                                It is very important that the customer is aware of the weight of the product. Phasel and my price. It will take care of the easy to dress up and not the foxes. Some fear of torture, the author of that pregnancy season, cartoon who I am. He will not take care of the players and only of the greatest crime
+                            </p>
+                            <a class="btn custom-btn" href="">Book A Table</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-cooking"></i>
+                                    <h3>World’s best Chef</h3>
+                                    <p>
+                                        Renowned for his work at El Celler de Can Roca in Spain, which has been recognized as one of the world's best restaurants. His innovative approach to traditional Catalan cuisine and commitment to creativity has earned him numerous awards.
+                                        The company itself is a great company. Phasel and my price. He will take care of the easy decoration of the fox
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-vegetable"></i>
+                                    <h3>Natural ingredients</h3>
+                                    <p>
+                                        Natural ingredients are fundamental components sourced from nature and often retain their original state or undergo minimal processing before being utilized in various applications. They encompass a broad spectrum of materials including botanical extracts, essential oils, herbs, fruits.
+                                    </p>
+                                        The company itself is a great company. Phasel and my price. He will take care of the easy decoration of the fox
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-medal"></i>
+                                    <h3>Best quality products</h3>
+                                    <p>
+                                        "Best quality products" refers to goods or items that are recognized for their superior standards, exceptional performance, reliability, and overall excellence in comparison to similar offerings in the market.These products are characterized by their outstanding design, materials used. 
+                                       </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-meat"></i>
+                                    <h3>Fresh vegetables & Meet</h3>
+                                    <p>
+                                        "Fresh vegetables & Meat" represents the availability of high-quality, unprocessed vegetables and meat products. This term highlights the provision of perishable food items that are sourced directly from farms, markets, or trusted suppliers and are known for their freshness.
+                            
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-courier"></i>
+                                    <h3>Fastest door delivery</h3>
+                                    <p>
+
+                                         Fastest door delivery is a service designed to cater to the growing demand for rapid shipping and efficient handling of orders in today's fast-paced world. While fastest door delivery emphasizes speed, it's also crucial to maintain the quality and safety of delivered items.
+                             
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-fruits-and-vegetables"></i>
+                                    <h3>Ground beef & Low fat</h3>
+                                    <p>
+                                        Natural ingredients encompass a wide array of elements derived from the earth, including herbs, botanical extracts, essential oils, fruits, vegetables, minerals, and more. These components are known for their purity and often carry beneficial properties that can nurture,heal.
+                            
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+        
+        
+        <!-- Food Start -->
+        <div class="food">
+            <div class="container">
+                <div class="row align-items-center">
+                {% for cat in categories %}
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            <i class="{{cat.icon}}"></i>
+                            <h2>{{cat.name}}</h2>
+                            <p>
+                                {{cat.description}}
+                            </p>
+                            <a href="{% url 'all_dishes' %}?q={{cat.id}}">View Menu</a>
+                        </div>
+                    
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Food End -->
+        
+        
+        <!-- Menu Start -->
+        <div class="menu">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Food Menu</p>
+                    <h2>Delicious Food Menu</h2>
+                </div>
+                <div class="menu-tab">
+                    
+                    <ul class="nav nav-pills justify-content-center">
+                        {% for category in menu %}
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#c-{{category.cat_id}}">{{category.cat_name}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content">
+                        {% for category in menu %}
+                        <div id="c-{{category.cat_id}}" class="container tab-pane">
+                            <div class="row">
+                                {% if category.items|length == 0 %}
+                                 <div class="col-md-12 text-center"><h3>No Items under {{category.cat_name}} Yet..</h3></div>
+                                {% else %}
+                                <div class="col-lg-7 col-md-12">
+                                {% for item in category.items %}
+                                    <div class="menu-item">
+                                        <div class="menu-img">
+                                            <img src="/media/{{item.image}}" alt="Image">
+                                        </div>
+                                        <div class="menu-text">
+                                            <h3><span><a href="{% url 'dish' id=item.id %}">{{item.name}}</a></span> 
+                                                {% if item.price != item.discounted_price %}
+                                                 <strong><del>&dollar;{{item.price}}</del></strong>
+                                                {% endif %}
+                                                 <strong>&dollar;{{item.discounted_price}}</strong>
+                                            </h3>
+                                            <p>{{item.ingredients}}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-block">
+                                    <img src="/media/{{category.cat_img}}" style="height:100%;width:100%;" alt="Image">
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+        
+        
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Our Team</p>
+                    <h2>Our Master Chef</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="/static/img/team-1.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Adam Phillips</h2>
+                                <p>CEO, Co Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="/static/img/team-2.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Matt Adams</h2>
+                                <p>Master Chef</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="/static/img/team-3.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Jhon Kiplagat</h2>
+                                <p>Master Chef</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="/static/img/team-4.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Josh Kamau</h2>
+                                <p>Master Chef</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        
+        <!-- Testimonial Start -->
+        <div class="testimonial">
+            <div class="container">
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="/static/img/testimonial-1.jpg" alt="Image">
+                        </div>
+                        <p>
+                            It help innovate and lead, rather than playing catch-up.
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="/static/img/testimonial-2.jpg" alt="Image">
+                        </div>
+                        <p>
+                             Allow customers to concentrate on the things they enjoy the most - cooking and running their restaurant.
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="/static/img/testimonial-3.jpg" alt="Image">
+                        </div>
+                        <p>
+                           Allow customers to concentrate on the things they enjoy the most - cooking and running their restaurant.
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="/static/img/testimonial-4.jpg" alt="Image">
+                        </div>
+                        <p>
+                            Allow customers to concentrate on the things they enjoy the most - cooking and running their restaurant.
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+{% endblock %}

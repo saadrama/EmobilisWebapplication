@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Place Order</title>
+    <link rel="stylesheet" type="text/css" href="file:///C:/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="file:///C:/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Place Order</h2>
+        <form method="POST" action="{% url 'order' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="customer_name">Name:</label>
+                <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+            </div>
+            <div class="form-group">
+                <label for="customer_email">Email:</label>
+                <input type="email" class="form-control" id="customer_email" name="customer_email" required>
+            </div>
+            <h4>Menu Items:</h4>
+            {% for item in menu_items %}
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="item{{ item.id }}" name="selected_items" value="{{ item.id }}">
+                <label class="form-check-label" for="item{{ item.id }}">{{ item.name }} - ${{ item.price }}</label>
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary mt-3">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
