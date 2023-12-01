@@ -206,8 +206,8 @@ def payment_done(request):
 
 def payment_cancel(request):
     ## remove comment to delete cancelled order
-    # order_id = request.session.get('order_id')
-    # Order.objects.get(id=order_id).delete()
+    order_id = request.session.get('order_id')
+    Order.objects.get(id=order_id).delete()
 
     return render(request, 'payment_failed.html') 
 

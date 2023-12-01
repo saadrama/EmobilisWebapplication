@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>M-Pesa Payment Form</title>
+</head>
+<body>
+    <h1>M-Pesa Payment Form</h1>
+    <form id="mpesaPaymentForm">
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount"><br><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+
+        <button type="button" onclick="initiateMpesaPayment()">Make Payment</button>
+    </form>
+
+    <script>
+        function initiateMpesaPayment() {
+            var amount = document.getElementById('amount').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+
+            // Construct payload
+            var payload = {
+                'amount': amount,
+                'phoneNumber': phoneNumber,
+                // Add other necessary fields as per M-Pesa API documentation
+            };
+
+            // Make an AJAX request to your Django view for payment initiation
+            fetch('/initiate_mpesa_payment/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken'), // Include CSRF token
+                },
+                body: JSON.stringify(payload),
+            })
+            .then(response => {
+                // Handle the response accordingly (e.g., show success message)
+                console.log('Payment initiation successful');
+            })
+            .catch(error => {
+                console.error('Error initiating payment:', error);
+            });
+        }
+
+        // Helper function to get CSRF token from cookies
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Get CSRF token
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>
